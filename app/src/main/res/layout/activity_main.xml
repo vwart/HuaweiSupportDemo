@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="de.grad.huaweisupportdemo.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:layout_marginBottom="32dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dear Huawei Support!"
+                android:layout_marginBottom="10dp"/>
+            <TextView android:id="@+id/info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:text="This app uses following code to export the log file:"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"/>
+            <TextView android:id="@+id/source"
+                android:padding="10dp"
+                android:background="#050505"
+                android:textColor="#aaaaaa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:text="Latest Logfile is here:"
+                android:background="#aaaaaa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+            <TextView
+                android:id="@+id/latest_file"
+                android:background="#aaaaaa"
+                android:textColor="#bb4444"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+            <TextView
+                android:text="The log file is empty on our MediaPad M2 8.0 Tablet, but it is not empty for every other device we got."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Produce Log"
+                android:background="#bbc0cc"
+                android:onClick="produceLog"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Export Log"
+                android:background="#aab0bb"
+                android:onClick="exportLog"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="View latest Logfile"
+                android:background="#99a0aa"
+                android:onClick="openLatestLogFile"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
